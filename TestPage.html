@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Contact Form</title>
+<style>
+body {
+  font-family: Helvetica;
+  font-weight: lighter;
+  background-color: #f0f0f0;
+}
+
+h1 {
+  color: #00c6d9;
+  font-size: 20px;
+  font-weight: normal;
+  text-align: center;
+}
+p {
+  color: #a7a9ac;
+}
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 200px;
+  height: 200px;
+  margin-bottom: 30px;
+
+}
+form {
+  text-align: center;
+}
+
+input[type=submit] {
+    padding:5px 15px;
+    background:#00c6d9;
+    border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    margin-top: 20px;
+    font-size: 14px;
+    color: white;
+}
+</style>
+<META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8" >
+</head>
+
+<body>
+<img src="asugo_logo.png">
+
+<h1> Fill this form to keep in touch!  </h1>
+
+<form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
+
+<input type=hidden name="oid" value="00D1i0000008sKK">
+<input type=hidden name="retURL" value="http://asugoconsulting.com/">
+
+
+<!--
+<input type="hidden" name="debug" value=1>
+<input type="hidden" name="debugEmail"
+value="m.decortis@asugoconsulting.com">
+-->
+
+<label for="first_name">*First Name</label><br><input  id="first_name" maxlength="40" name="first_name" size="20" type="text" required/><br><br>
+
+<label for="last_name">*Last Name</label><br><input  id="last_name" maxlength="80" name="last_name" size="20" type="text" required/><br><br>
+
+<label for="email">*Email</label><br><input  id="email" maxlength="80" name="email" size="20" type="text" required/><br><br>
+
+<label for="company">*University</label><br><input  id="company" maxlength="40" name="company" size="20" type="text" required/><br><br>
+
+<label for="mobile">Mobile</label><br><input  id="mobile" maxlength="40" name="mobile" size="20" type="text" /><br><br>
+
+*Language:<br><select  id="00N1i000000iZxR" name="00N1i000000iZxR" title="Language"><option value="">--None--</option><option value="Dutch">Dutch</option>
+<option value="English">English</option>
+<option value="French">French</option>
+</select><br><br>
+
+Field of Study:<br><input  id="00N1i000000iZxW" maxlength="60" name="00N1i000000iZxW" size="20" type="text" /><br><br>
+
+*Level:<br><select  id="00N1i000000iZyP" name="00N1i000000iZyP" title="School Level"><option value="">--None--</option><option value="Master 1">Master 1</option>
+<option value="Master 2">Master 2</option>
+<option value="Other">Other</option>
+</select><br><br>
+
+<br>I consent to the processing of my data for recruitment purposes:<input  id="00N1i000000icjf" name="00N1i000000icjf" type="checkbox" value="1" required/><br>
+
+
+<input type="hidden" name="lead_source" id="lead_source" value="Job Fair">
+
+<input type="submit" name="submit">
+
+</form>
+
+<style type='text/css'>
+	.embeddedServiceHelpButton .helpButton .uiButton {
+		background-color: #7CC45C;
+		font-family: "Arial", sans-serif;
+	}
+	.embeddedServiceHelpButton .helpButton .uiButton:focus {
+		outline: 1px solid #7CC45C;
+	}
+</style>
+
+<script type='text/javascript' src='https://service.force.com/embeddedservice/5.0/esw.min.js'></script>
+<script type='text/javascript'>
+	var initESW = function(gslbBaseURL) {
+		embedded_svc.settings.displayHelpButton = true; //Or false
+		embedded_svc.settings.language = ''; //For example, enter 'en' or 'en-US'
+
+		//embedded_svc.settings.defaultMinimizedText = '...'; //(Defaults to Chat with an Expert)
+		//embedded_svc.settings.disabledMinimizedText = '...'; //(Defaults to Agent Offline)
+
+		//embedded_svc.settings.loadingText = ''; //(Defaults to Loading)
+		//embedded_svc.settings.storageDomain = 'yourdomain.com'; //(Sets the domain for your deployment so that visitors can navigate subdomains during a chat session)
+
+		// Settings for Chat
+		//embedded_svc.settings.directToButtonRouting = function(prechatFormData) {
+			// Dynamically changes the button ID based on what the visitor enters in the pre-chat form.
+			// Returns a valid button ID.
+		//};
+		//embedded_svc.settings.prepopulatedPrechatFields = {}; //Sets the auto-population of pre-chat form fields
+		//embedded_svc.settings.fallbackRouting = []; //An array of button IDs, user IDs, or userId_buttonId
+		//embedded_svc.settings.offlineSupportMinimizedText = '...'; //(Defaults to Contact Us)
+
+		embedded_svc.settings.enabledFeatures = ['LiveAgent'];
+		embedded_svc.settings.entryFeature = 'LiveAgent';
+
+		embedded_svc.init(
+			'https://flora--floradev.my.salesforce.com',
+			'https://floradev-flora.cs109.force.com',
+			gslbBaseURL,
+			'00D0Q0000008iP9',
+			'Chat_Website_FR',
+			{
+				baseLiveAgentContentURL: 'https://c.la1-c1cs-fra.salesforceliveagent.com/content',
+				deploymentId: '5723X000000Y4DW',
+				buttonId: '5733X000000Y3ik',
+				baseLiveAgentURL: 'https://d.la1-c1cs-fra.salesforceliveagent.com/chat',
+				eswLiveAgentDevName: 'EmbeddedServiceLiveAgent_Parent04I0Q0000008OkTUAU_177a5447acc',
+				isOfflineSupportEnabled: false
+			}
+		);
+	};
+
+	if (!window.embedded_svc) {
+		var s = document.createElement('script');
+		s.setAttribute('src', 'https://flora--floradev.my.salesforce.com/embeddedservice/5.0/esw.min.js');
+		s.onload = function() {
+			initESW(null);
+		};
+		document.body.appendChild(s);
+	} else {
+		initESW('https://service.force.com');
+	}
+</script>
+</body>
+</html>
